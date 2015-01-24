@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg42"
+    android:orientation="vertical" >
+    
+  
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Ardfert Cathedral"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/ard" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="176dp"
+        android:text="Established on a 6th century monastery the structure was built and dates back to the 12th century.
+Ardfert Cathedral shows excellent craft work on stone carved heads and carved slabs. This location shows a very impressive ogham stone which is a must see.
+        " />
+    
+    
+      <TableLayout 
+        android:id="@+id/ButtonsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="0,1"
+        android:orientation="horizontal">
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent">
+    <Button
+        android:id="@+id/add"
+        android:layout_width="112dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button"
+        android:gravity="center_horizontal"
+        android:text="Add to favourites" />
+
+    <Button android:id="@+id/directions" 
+        android:layout_width="120dp" 
+        android:layout_height="wrap_content" 
+        android:background="@drawable/button" 
+        android:gravity="center_horizontal" 
+        android:text="Directions"/>
+		
+       </TableRow>
+    </TableLayout>
+    
+
+</LinearLayout>

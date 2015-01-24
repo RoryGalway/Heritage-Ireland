@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg42"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/TextView02"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+       	android:text="Fáilte Roimh"
+       	android:textStyle=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="166dp"
+        android:src="@drawable/ituntitled" />
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/map"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/iconmap2"
+        android:drawablePadding="2dip"
+		android:paddingLeft="30dip"
+		android:paddingRight="26dip"
+		android:singleLine="true"
+        android:text="Map" />
+
+    <Button
+        android:id="@+id/favourites"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/fav42"
+        android:drawablePadding="2dip"
+		android:paddingLeft="30dip"
+		android:paddingRight="26dip"
+		android:singleLine="true"
+        android:text="Favourites" />
+
+    <Button
+        android:id="@+id/county"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/list2"
+        android:drawablePadding="2dip"
+		android:paddingLeft="30dip"
+		android:paddingRight="26dip"
+		android:singleLine="true"
+        android:text="Top Places" />
+
+    <Button
+        android:id="@+id/about"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button2"
+        android:drawableLeft="@drawable/about2"
+        android:drawablePadding="2dip"
+		android:paddingLeft="30dip"
+		android:paddingRight="26dip"
+		android:singleLine="true"
+        android:text="About" />
+
+</LinearLayout>

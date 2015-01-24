@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg42"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Aughnanure Castle"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="154dp"
+        android:src="@drawable/aug" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="182dp"
+        android:text="This is a well preserved tower house castle from the 16th century. The O&apos;Flahertie clan ruled over Aughnanure, along the western shores of Galway, Ireland as early as the 8th century.  Outside the castle are two courtyards, one original and one that was added at a later period. There is well-known fable that there was once a trap door where unwelcome guests could be dropped into the river flowing below the courtyard." />
+
+    <TableLayout
+        android:id="@+id/ButtonsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:stretchColumns="0,1" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Add to favourites" />
+
+            <Button
+                android:id="@+id/directions"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Directions" />
+        </TableRow>
+    </TableLayout>
+
+</LinearLayout>
