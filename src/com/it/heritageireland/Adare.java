@@ -1,46 +1,38 @@
 package com.it.heritageireland;
 
-import android.app.ActionBar;
+import com.facebook.UiLifecycleHelper;
+import com.facebook.widget.FacebookDialog;
+
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.view.ViewGroup;
 import android.webkit.WebView;
 import android.widget.Button;
 
+// This class contains all the pop ups and share dialogs for the other classes
+
 public class Adare extends Activity{
 	
+	// url for facebook dialog
+	static String appurl = "http://www.amazon.com/s?ie=UTF8&field-brandtextbin=Derek%20McAuley&page=1&rh=n%3A2350149011";
+	
 	DatabaseHelper  databaseHelper;
+	private static UiLifecycleHelper uiHelper;
 	
 	public void onCreate(Bundle savedInstanceState)
 	{
 		super.onCreate(savedInstanceState);
-		LayoutInflater inflater = (LayoutInflater) getActionBar()
-	            .getThemedContext().getSystemService(LAYOUT_INFLATER_SERVICE);
-	    View customActionBarView = inflater.inflate(R.layout.actionbar_custom, null);
-	    ActionBar actionBar = getActionBar();
-	   actionBar.setTitle("Hidden Ireland");
-	  
-	    actionBar.setDisplayOptions(
-	    	
-	            ActionBar.DISPLAY_SHOW_CUSTOM,
-	            ActionBar.DISPLAY_SHOW_CUSTOM | ActionBar.DISPLAY_SHOW_HOME
-	                    | ActionBar.DISPLAY_SHOW_TITLE);
-	    
-	    	
-	    actionBar.setCustomView(customActionBarView,
-	            new ActionBar.LayoutParams(
-	                    ViewGroup.LayoutParams.MATCH_PARENT,
-	                    ViewGroup.LayoutParams.MATCH_PARENT));
-		
-		
 		setContentView(R.layout.stone);
+		
+		uiHelper = new UiLifecycleHelper(this, null);
+	    uiHelper.onCreate(savedInstanceState);
+		
+		
 		Button directions = (Button) findViewById(R.id.directions);
         directions.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
@@ -62,20 +54,7 @@ public class Adare extends Activity{
             	databaseHelper = new DatabaseHelper(Adare.this, null,null, 1);
             	Products product = new Products(Adare.toString());
             	databaseHelper.addProduct(product);
-            	new AlertDialog.Builder( Adare.this )
-                .setIcon(R.drawable.favs)
-                
-                .setTitle( "Added to Favourites" )
-                .setPositiveButton( "Awsome!!!", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d( "AlertDialog", "Positive" );
-                        
-                    }
-           
-                } )
-                
-                .show();
-            
+            	saved(Adare.this);
              }
         });
         
@@ -84,25 +63,86 @@ public class Adare extends Activity{
     	share.setOnClickListener(new OnClickListener(){
 		@Override
 		public void onClick(View v) {
-			
-			Share("Adare Castle","Medieval fortified castle in County Limerick");
-			
-		}
-    	
-    	
+			Share(Adare.this, "Adare Castle","Medieval fortified castle in County Limerick");			
+		}   	
     });
-        
-        
+             
 	}
-	public void Share(String name, String body){
-		Intent intent = new Intent(android.content.Intent.ACTION_SEND);
-		intent.setAction(Intent.ACTION_SEND);
+	
+	public static void Share(Activity a, String name, String body){
+
+		try{
+			
+		FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(a)
+		.setLink(appurl)
+	    .setName("Check out this get place on the Hidden Ireland app")
+//	    .setCaption("Hello Facebook")
+//        .setApplicationName("Hidden Ireland")
+//        .setPicture("https://drive.google.com/file/d/0ByycdEPHqbpKNzctYWliOUhHMW8/view?usp=sharing")
+        .build();
+		uiHelper.trackPendingDialogCall(shareDialog.present());
 		
-		intent.setType("text/plain");
-		intent.putExtra(Intent.EXTRA_TEXT, name + "  " + body);
-		startActivity(Intent.createChooser(intent, "Share"));
+		}
+		catch(Exception e){
+			System.out.println(e);
+		}
 		
 	}
 	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+	    super.onActivityResult(requestCode, resultCode, data);
+
+	    uiHelper.onActivityResult(requestCode, resultCode, data, new FacebookDialog.Callback() {
+	        @Override
+	        public void onError(FacebookDialog.PendingCall pendingCall, Exception error, Bundle data) {
+	            Log.e("Activity", String.format("Error: %s", error.toString()));
+	        }
+
+	        @Override
+	        public void onComplete(FacebookDialog.PendingCall pendingCall, Bundle data) {
+	            Log.i("Activity", "Success!");
+	        }
+	    });
+	}
+	
+	@Override
+	protected void onResume() {
+	    super.onResume();
+	    uiHelper.onResume();
+	}
+
+	@Override
+	protected void onSaveInstanceState(Bundle outState) {
+	    super.onSaveInstanceState(outState);
+	    uiHelper.onSaveInstanceState(outState);
+	}
+
+	@Override
+	public void onPause() {
+	    super.onPause();
+	    uiHelper.onPause();
+	}
+
+	@Override
+	public void onDestroy() {
+	    super.onDestroy();
+	    uiHelper.onDestroy();
+	}
+	// method for the saved dialog
+	public static void saved(Activity name){
+		new AlertDialog.Builder(name)
+        .setIcon(R.drawable.favs)
+        .setTitle( "Added to Favourites" )
+        .setPositiveButton( "Awsome!!!", new DialogInterface.OnClickListener() {
+            public void onClick(DialogInterface dialog, int which) {
+                Log.d( "AlertDialog", "Positive" );  
+            }
+        } )
+        .show();
+	}
+	
+	
+
 	
 }

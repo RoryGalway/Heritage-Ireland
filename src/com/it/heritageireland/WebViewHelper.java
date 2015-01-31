@@ -1,5 +1,6 @@
 package com.it.heritageireland;
 
+import android.annotation.SuppressLint;
 import android.app.ProgressDialog;
 import android.content.Context;
 import android.graphics.Bitmap;
@@ -16,7 +17,9 @@ public class WebViewHelper  {
     private ProgressDialog mProgressDialog;
 
     //make it final so it will be accessible to setWebViewClient
-    public WebView webview(final Context mContext) {
+    @SuppressWarnings("deprecation")
+	@SuppressLint("SetJavaScriptEnabled")
+	public WebView webview(final Context mContext) {
 
         // progress dialog
         mProgressDialog = new ProgressDialog(mContext);
