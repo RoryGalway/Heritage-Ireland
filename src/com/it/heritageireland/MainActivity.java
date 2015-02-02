@@ -28,7 +28,12 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker Ardfert =null; 
 	protected static Marker Athenry  =null; 
 	protected static Marker Aughnanure =null;
-	
+	protected static Marker Ballyhack =null;
+	protected static Marker Barryscourt =null;
+	protected static Marker BoyleAbbey =null;
+	protected static Marker Newgrange = null;
+	protected static Marker Carrowmore = null;
+	protected static Marker Connemara = null;
 	
 	// The map
 	private GoogleMap theMap;
@@ -73,8 +78,34 @@ public class MainActivity extends ActionBarActivity {
 				Ardfert();
 				Athenry();
 				Aughnanure();
+				Ballyhack();
+				Barryscourt();
+				BoyleAbbey();
+				Newgrange();
+				Currowmore();
+				Connemara();
 	}
 	
+	private void Barryscourt() 
+	{
+		
+		// TODO Auto-generated method stub
+		LatLng pos = new LatLng(51.904604, -8.259016);
+		Barryscourt = theMap.addMarker(new MarkerOptions()
+		
+				.title("Barryscourt Castle")
+				.snippet("15th to 16th century Castle")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Barryscourt.isInfoWindowShown();
+		
+		
+	}
 	
 	private void holystone() 
 	{
@@ -151,8 +182,130 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, Aughnanure.class);
 		            		startActivity(intent);
 		            	}
+		            	// Barryscourt
+		            	else if(Ballyhack.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Ballyhack.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Barryscourt.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Barryscourt.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (BoyleAbbey.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, BoyleAbbey.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Newgrange.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Newgrange.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Carrowmore.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Carrowmore.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Connemara.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Connemara.class);
+		            		startActivity(intent);
+		            	}
 		            }		
 		        });		
+	}
+
+	
+	public void Connemara()
+	{
+		LatLng pos = new LatLng(53.538378, -9.887542);
+		
+		Connemara = theMap.addMarker(new MarkerOptions()
+		
+				.title("Connemara National Park")
+				.snippet("National Park")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Connemara.isInfoWindowShown();
+	
+	}
+	
+	
+	public void Currowmore()
+	{
+		LatLng pos = new LatLng(54.250807, -8.519323);
+		
+		Carrowmore = theMap.addMarker(new MarkerOptions()
+		
+				.title("Currowmore")
+				.snippet("Megalithic Cemetery")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Carrowmore.isInfoWindowShown();
+	
+	}
+	
+	
+	public void Ballyhack()
+	{
+		LatLng pos = new LatLng(52.248475, -6.964192);
+		
+		Ballyhack = theMap.addMarker(new MarkerOptions()
+		
+				.title("Ballyhack Castle")
+				.snippet("15th-century Knights Hospitallers.")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Ballyhack.isInfoWindowShown();
+	
+	}
+	public void Newgrange()
+	{
+		LatLng pos = new LatLng(53.694712, -6.475492);
+		
+		Newgrange = theMap.addMarker(new MarkerOptions()
+		
+				.title("Newgrange - Brú na Bóinne")
+				.snippet("Neolithic monuments")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		Newgrange.isInfoWindowShown();
+	
+	}
+	private void BoyleAbbey() 
+	{
+		
+		// TODO Auto-generated method stub
+		LatLng pos = new LatLng(53.973559, -8.296974);
+		BoyleAbbey = theMap.addMarker(new MarkerOptions()
+		
+				.title("BoyleAbbey")
+				.snippet("Cistercian Monastery")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		BoyleAbbey.isInfoWindowShown();
+		
+		
 	}
 	
 	public void Aughnanure()
@@ -171,8 +324,7 @@ public class MainActivity extends ActionBarActivity {
 		//Pin.showInfoWindow();
 		
 		Aughnanure.isInfoWindowShown();
-		
-		
+	
 	}
 	
 	public void Ardfert()
@@ -254,7 +406,7 @@ public class MainActivity extends ActionBarActivity {
 		userMarker = theMap.addMarker(new MarkerOptions()
 		.position(lastLatLng)
 		.title("You are here")
-		.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+		.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
 		.snippet("Your last recorded location"));
 		
 		//move to location 

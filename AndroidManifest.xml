@@ -83,8 +83,50 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
             
-            
             </activity>
+            
+             <activity android:name=".Carrowmore">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Carrowmore" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+            <activity android:name=".Connemara">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Connemara" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+        <activity android:name=".Ballyhack">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Ballyhack" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+        <activity android:name=".Barryscourt">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Barryscourt" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+        <activity android:name=".Newgrange">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Newgrange" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
+        <activity android:name=".BoyleAbbey">
+            <intent-filter>
+                <action android:name="com.it.heritageireland.BoyleAbbey" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+            </activity>
+            
         <activity android:name=".Rock_Of_Cashel">
             
             <intent-filter>
