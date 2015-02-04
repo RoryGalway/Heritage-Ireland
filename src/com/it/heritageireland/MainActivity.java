@@ -34,6 +34,7 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker Newgrange = null;
 	protected static Marker Carrowmore = null;
 	protected static Marker Connemara = null;
+	protected static Marker Coole = null;
 	
 	// The map
 	private GoogleMap theMap;
@@ -62,7 +63,6 @@ public class MainActivity extends ActionBarActivity {
 					// Below sets the map view to normal.
 					theMap.setMapType(GoogleMap.MAP_TYPE_NORMAL);
 					
-					
 					//check in case map/ Google Play services not available
 					if(theMap!=null){
 						//ok - proceed
@@ -84,6 +84,7 @@ public class MainActivity extends ActionBarActivity {
 				Newgrange();
 				Currowmore();
 				Connemara();
+				Coole();
 	}
 	
 	private void Barryscourt() 
@@ -207,15 +208,35 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, Connemara.class);
 		            		startActivity(intent);
 		            	}
+		            	else if (Coole.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Coole.class);
+		            		startActivity(intent);
+		            	}
 		            }		
 		        });		
 	}
-
+	
+	public void Coole()
+	{
+		LatLng pos = new LatLng(53.080184, -8.854295);
+		
+		Coole = theMap.addMarker(new MarkerOptions()
+		
+				.title("Coole Park")
+				.snippet("National Park")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Coole.isInfoWindowShown();
+	}
 	
 	public void Connemara()
 	{
 		LatLng pos = new LatLng(53.538378, -9.887542);
-		
 		Connemara = theMap.addMarker(new MarkerOptions()
 		
 				.title("Connemara National Park")
