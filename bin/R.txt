@@ -661,6 +661,7 @@ int layout newgrange 0x7f030035
 int layout rock 0x7f030036
 int layout stone 0x7f030037
 int layout support_simple_spinner_dropdown_item 0x7f030038
+int layout topplaces 0x7f030039
 int menu main 0x7f0c0000
 int string Empty 0x7f080049
 int string abc_action_bar_home_description 0x7f080038

@@ -2,12 +2,13 @@ package com.it.heritageireland;
 
 import com.facebook.UiLifecycleHelper;
 import com.facebook.widget.FacebookDialog;
-
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.ProgressDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.os.Handler;
 import android.util.Log;
 import android.view.View;
 import android.view.View.OnClickListener;
@@ -69,22 +70,35 @@ public class Adare extends Activity{
              
 	}
 	
-	public static void Share(Activity a, String name, String body){
+	public static void Share(final Activity a, String name, String body){
 
 		try{
+			 Handler handler = new Handler();
+	            handler.postDelayed(new Runnable() {
+	                public void run() {
+	                    
+	                        final ProgressDialog dialog = ProgressDialog.show(
+	                                a, "Loading Facebook... ", "You'll be sharing in no time...", false, true);
+	                        dialog.setProgressStyle(ProgressDialog.STYLE_SPINNER);
+	                    
+	                }
+	            }, 1000);
+			 
 			
 		FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(a)
 		.setLink(appurl)
 	    .setName("Check out this get place on the Hidden Ireland app")
-//	    .setCaption("Hello Facebook")
-//        .setApplicationName("Hidden Ireland")
-//        .setPicture("https://drive.google.com/file/d/0ByycdEPHqbpKNzctYWliOUhHMW8/view?usp=sharing")
+	    .setCaption("Hello Facebook")
+        .setApplicationName("Hidden Ireland")
+        .setPicture("https://drive.google.com/file/d/0ByycdEPHqbpKNzctYWliOUhHMW8/view?usp=sharing")
         .build();
 		uiHelper.trackPendingDialogCall(shareDialog.present());
 		
 		}
 		catch(Exception e){
+			
 			System.out.println(e);
+			
 		}
 		
 	}

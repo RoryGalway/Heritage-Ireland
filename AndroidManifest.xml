@@ -59,7 +59,15 @@
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="com.it.heritageireland.MainActivity" />
-
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name=".TopPlaces"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.TopPlaces" />
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>

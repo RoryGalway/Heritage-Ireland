@@ -56,7 +56,7 @@ public class home extends ActionBarActivity {
 	            break;
 			case R.id.topPlaces:
 				// Place holder - This needs to be changed to when topPlaces has been created.
-				Intent intent4 = new Intent(home.this, Favourites.class);
+				Intent intent4 = new Intent(home.this, TopPlaces.class);
 	            startActivity(intent4);
 	            break;
 			case R.id.imageView1:
