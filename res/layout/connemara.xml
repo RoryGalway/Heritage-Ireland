@@ -15,16 +15,29 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="185dp"
         android:src="@drawable/connemara" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="162dp"
+        android:layout_height="131dp"
+        android:background="#FFFFFF"
         android:text="Connemara National Park was founded and opened to the public in 1980. It features 2,957 hectares of mountains, bogs, heaths, grasslands and forests.
 There is a 19th-century graveyard as well as 4,000 year old megalithic court tombs. Much of the land was once part of the Kylemore Abbey estate.
          " />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -59,7 +72,7 @@ There is a 19th-century graveyard as well as 4,000 year old megalithic court tom
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/facebook_icon"
+       	android:background="@drawable/button_background_selector" 
         />
 
 </LinearLayout>

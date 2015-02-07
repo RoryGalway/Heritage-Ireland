@@ -29,9 +29,17 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="176dp"
+        android:background="#FFFFFF" 
         android:text="The 3-storey tower house name derives from the ford (&apos;Áth&apos;) crossing the river Clarin. Because three kingdoms meet at that point, it was called &apos;Áth na Ríogh&apos;, or &apos;the Ford of the Kings&apos;.
 Medieval walls around Athenry are among the most complete and best preserved in Ireland and still retain a number of the original towers as well as the original North gate. The remains of the Lorro Gate were partially unearthed in 2007 during redevelopment road works in the area.
 " />
+    
+       <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textAppearance="?android:attr/textAppearanceLarge" />
   <TableLayout 
         android:id="@+id/ButtonsTable"
         android:layout_width="fill_parent"

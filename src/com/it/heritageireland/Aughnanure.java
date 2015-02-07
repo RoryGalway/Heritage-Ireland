@@ -18,6 +18,16 @@ public class Aughnanure extends Activity{
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.aughnanure);
+		Button share = (Button) findViewById(R.id.share);
+		share.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Adare.Share(Aughnanure.this, "Aughnanure Castle","16th-century Castle");	
+				
+			}
+			
+		});
 		Button directions = (Button) findViewById(R.id.directions);
         directions.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {

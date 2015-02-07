@@ -15,15 +15,28 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="175dp"
         android:src="@drawable/carrowmore" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="162dp"
+        android:layout_height="134dp"
+        android:background="#FFFFFF"
         android:text="Carrowmore is one of the four major passage tomb complexes in Ireland. Dates between 3700-2900 BC and are also known as The Satellite Tombs. 
 The tombs (in their original state) consisted of a central dolmen-like megalith with 5 uprights orthostats bearing a roughly conical capstone on top, enclosing a small pentagonal burial chamber. " />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -58,7 +71,7 @@ The tombs (in their original state) consisted of a central dolmen-like megalith 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/facebook_icon"
+       	android:background="@drawable/button_background_selector" 
         />
 
 </LinearLayout>

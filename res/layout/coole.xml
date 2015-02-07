@@ -15,16 +15,29 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="198dp"
         android:src="@drawable/coole" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="162dp"
-        android:text=" W.B Yeats took great inspiration from his visits here while he wrote 'The Wild Swans of Coole' 
+        android:layout_height="116dp"
+        android:background="#FFFFFF"
+        android:text=" W.B Yeats took great inspiration from his visits here while he wrote &apos;The Wild Swans of Coole&apos; 
 The site has also inspired great writers such as George Bernard Shaw and many others who carved their initials on the autograph tree which can be seen in the walled garden.
 " />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -59,7 +72,7 @@ The site has also inspired great writers such as George Bernard Shaw and many ot
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/facebook_icon"
+       	android:background="@drawable/button_background_selector" 
         />
 
 </LinearLayout>

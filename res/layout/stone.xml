@@ -15,18 +15,30 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="154dp"
+        android:layout_height="140dp"
         android:src="@drawable/holy" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="201dp"
+        android:layout_height="170dp"
+        android:background="#FFFFFF"
         android:text="Best examples of medieval fortified castle in County Limerick.
 This was such an important stronghold of the Earls of Desmond. 
 The defences core of the castle can be seen with the walled surroundings and moat.
 The great hall can be seen located beside the river with an excellent view of the early 13th century windows that scopes river." />
-    
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
       
       <TableLayout 
         android:id="@+id/ButtonsTable"
@@ -66,7 +78,7 @@ The great hall can be seen located beside the river with an excellent view of th
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       android:background="@drawable/facebook_icon"
+      android:background="@drawable/button_background_selector" 
         />
 
 </LinearLayout>

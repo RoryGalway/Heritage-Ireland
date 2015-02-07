@@ -18,6 +18,16 @@ public class Rock_Of_Cashel extends Activity{
 	{
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.rock);
+		Button share = (Button) findViewById(R.id.share);
+		share.setOnClickListener(new OnClickListener(){
+
+			@Override
+			public void onClick(View v) {
+				Adare.Share(Rock_Of_Cashel.this, "Rock Of Cashel","St. Patrick Rock");	
+				
+			}
+			
+		});
 		Button directions = (Button) findViewById(R.id.directions);
         directions.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {

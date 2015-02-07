@@ -20,13 +20,25 @@
         android:src="@drawable/ard" />
 
     <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="176dp"
+        android:layout_height="145dp"
+        android:background="#FFFFFF"
         android:text="Established on a 6th century monastery the structure was built and dates back to the 12th century.
 Ardfert Cathedral shows excellent craft work on stone carved heads and carved slabs. This location shows a very impressive ogham stone which is a must see.
         " />
-    
+
+       <TextView
+        android:id="@+id/textView5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="" />
     
       <TableLayout 
         android:id="@+id/ButtonsTable"
@@ -60,7 +72,6 @@ Ardfert Cathedral shows excellent craft work on stone carved heads and carved sl
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       android:background="@drawable/facebook_icon"
-        />
+		android:background="@drawable/button_background_selector" />
 
 </LinearLayout>

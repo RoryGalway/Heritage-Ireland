@@ -15,17 +15,30 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="177dp"
         android:src="@drawable/ballyhack" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="123dp"
+        android:background="#FFFFFF"
         android:text="15th-century Knights Hospitallers
 Built around 1450 by the Knights Hospitallers of St. John, one of the two great military orders founded at the beginning of the 12th century during the time of the Crusades.
         
         " />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -60,7 +73,7 @@ Built around 1450 by the Knights Hospitallers of St. John, one of the two great 
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/facebook_icon"
+       	android:background="@drawable/button_background_selector" 
         />
 
 </LinearLayout>

@@ -15,15 +15,28 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="218dp"
+        android:layout_height="190dp"
         android:src="@drawable/altmont" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="151dp"
-        android:text="Possibly the most romantic garden in Ireland.  Filled with sculpture beauty which leads the eyes down to romantic waters and back to the stunning blooming roses.  Large, beautiful old world garden.  A great plant collection within the natural landscape, surrounded by rare trees, shrubs and a profusion of roses.  There is a steep descent through the Ice Age Glen to a beautiful river walk.
+        android:layout_height="126dp"
+        android:background="#FFFFFF"
+        android:text="Possibly the most romantic garden in Ireland.  Filled with sculpture beauty which leads the eyes down to romantic waters and back to the stunning blooming roses.  Large, beautiful old world garden.  A great plant collection within the natural landscape, surrounded by rare trees, shrubs and a profusion of roses.
         " />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -53,12 +66,11 @@
                 android:text="Directions" />
         </TableRow>
     </TableLayout>
-    <Button
+   <Button
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       android:background="@drawable/facebook_icon"
-        />
+		android:background="@drawable/button_background_selector" />
 
 </LinearLayout>

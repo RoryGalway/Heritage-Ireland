@@ -19,10 +19,23 @@
         android:src="@drawable/aug" />
 
     <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="182dp"
+        android:layout_height="164dp"
+        android:background="#FFFFFF"
         android:text="This is a well preserved tower house castle from the 16th century. The O&apos;Flahertie clan ruled over Aughnanure, along the western shores of Galway, Ireland as early as the 8th century.  Outside the castle are two courtyards, one original and one that was added at a later period. There is well-known fable that there was once a trap door where unwelcome guests could be dropped into the river flowing below the courtyard." />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
 
     <TableLayout
         android:id="@+id/ButtonsTable"
@@ -52,5 +65,12 @@
                 android:text="Directions" />
         </TableRow>
     </TableLayout>
+    
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+		android:background="@drawable/button_background_selector" />
 
 </LinearLayout>

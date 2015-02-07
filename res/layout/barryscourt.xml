@@ -25,16 +25,25 @@
         android:layout_height="wrap_content"
        
         android:textAppearance="?android:attr/textAppearanceLarge" />
+
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="176dp"
+        android:layout_height="144dp"
+        android:background="#FFFFFF"
         android:text="15th to 16th century Castle
 
 Barryscourt Castle survives in remarkably good condition.
-Immigrants from Wales in the 12th century, the Barry family quickly began intermarrying with important Irish families of the time. Soon they had huge tracts of land and real wealth. In order to protect their fortune, the clan began building a vast fortification in the 15th century.
+Immigrants from Wales in the 12th century, the Barry family quickly began intermarrying with important Irish families of the time. Soon they had huge tracts of land and real wealth.
 
         " />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
   <TableLayout 
         android:id="@+id/ButtonsTable"
         android:layout_width="fill_parent"
@@ -67,7 +76,7 @@ Immigrants from Wales in the 12th century, the Barry family quickly began interm
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/facebook_icon"
+       	android:background="@drawable/button_background_selector" 
         />
   
   

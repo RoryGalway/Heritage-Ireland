@@ -18,6 +18,7 @@ public class home extends ActionBarActivity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.home);
 		
+		
 		// creates the dataabse
 		databaseHelper = new DatabaseHelper(home.this, null,null, 1);
 		
