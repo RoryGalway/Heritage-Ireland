@@ -90,7 +90,7 @@ public class Adare extends Activity{
 	    .setName("Check out this get place on the Hidden Ireland app")
 	    .setCaption("Hello Facebook")
         .setApplicationName("Hidden Ireland")
-        .setPicture("https://drive.google.com/file/d/0ByycdEPHqbpKNzctYWliOUhHMW8/view?usp=sharing")
+        .setPicture("http://i62.tinypic.com/98zvv6.png")
         .build();
 		uiHelper.trackPendingDialogCall(shareDialog.present());
 		
@@ -157,6 +157,5 @@ public class Adare extends Activity{
 	}
 	
 	
-
 	
 }

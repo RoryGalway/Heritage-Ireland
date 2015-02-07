@@ -42,12 +42,15 @@
                   android:label="@string/app_name" />
         <meta-data android:name="com.facebook.sdk.ApplicationId" android:value="@string/app_id"/>
         
+        <provider android:authorities="com.facebook.app.NativeAppCallContentProvider740416542732467"
+                  android:name="com.facebook.NativeAppCallContentProvider"
+                  android:exported="true"/>
+        
         <activity
             android:name=".home"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
@@ -62,6 +65,36 @@
                 <category android:name="android.intent.category.DEFAULT" />
             </intent-filter>
         </activity>
+        
+         <activity
+            android:name=".Desmond"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Desmond" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+          <activity
+            android:name=".Doneraile"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Doneraile" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         
+        
+                <activity
+            android:name=".Derrynane"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.Derrynane" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
         
           <activity
             android:name=".TopPlaces"

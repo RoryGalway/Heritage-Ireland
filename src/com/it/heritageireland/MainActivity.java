@@ -35,6 +35,9 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker Carrowmore = null;
 	protected static Marker Connemara = null;
 	protected static Marker Coole = null;
+	protected static Marker Derrynane = null;
+	protected static Marker Desmond = null;
+	protected static Marker Doneraile = null;
 	
 	// The map
 	private GoogleMap theMap;
@@ -85,7 +88,10 @@ public class MainActivity extends ActionBarActivity {
 				Currowmore();
 				Connemara();
 				Coole();
-	}
+				Derrynane();
+				Desmond();
+				Doneraile();
+				}
 	
 	private void Barryscourt() 
 	{
@@ -212,8 +218,81 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, Coole.class);
 		            		startActivity(intent);
 		            	}
+		            	else if (Derrynane.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Derrynane.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Desmond.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Desmond.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (Doneraile.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, Doneraile.class);
+		            		startActivity(intent);
+		            	}
+		            	
+		            	
 		            }		
 		        });		
+	}
+	
+	
+	
+	public void Doneraile(){
+		
+	LatLng pos = new LatLng(52.221723, -8.5816388);
+			
+	Doneraile = theMap.addMarker(new MarkerOptions()
+			
+					.title("Doneraile Park")
+					.snippet("18th-century landscaped park")
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+					.position(pos)
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+			);
+			// below displays the window...remove this!!!
+			//Pin.showInfoWindow();
+			
+	Doneraile.isInfoWindowShown();
+		
+	}
+	
+	
+	public void Desmond(){
+		
+	LatLng pos = new LatLng(51.70726, -8.524691);
+			
+			Desmond = theMap.addMarker(new MarkerOptions()
+			
+					.title("Desmond Castle")
+					.snippet("Tower House")
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+					.position(pos)
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+			);
+			// below displays the window...remove this!!!
+			//Pin.showInfoWindow();
+			
+			Desmond.isInfoWindowShown();
+		
+	}
+	
+	public void Derrynane()
+	{
+		LatLng pos = new LatLng(51.762402, -10.1306);
+		
+		Derrynane = theMap.addMarker(new MarkerOptions()
+		
+				.title("Derrynane House")
+				.snippet("National Monument")
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+				.position(pos)
+				.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+		);
+		// below displays the window...remove this!!!
+		//Pin.showInfoWindow();
+		
+		Derrynane.isInfoWindowShown();
 	}
 	
 	public void Coole()
