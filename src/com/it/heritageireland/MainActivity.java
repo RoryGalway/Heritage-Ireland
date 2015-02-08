@@ -39,6 +39,13 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker Desmond = null;
 	protected static Marker Doneraile = null;
 	protected static Marker DromoreWood = null;
+	protected static Marker DunAonghasa = null;
+	protected static Marker DungarvanCastle = null;
+	protected static Marker DunmoreCave = null;
+	protected static Marker McAllisterCottage = null;
+	protected static Marker EmoCourt = null;
+	
+	
 	
 	// The map
 	private GoogleMap theMap;
@@ -58,7 +65,6 @@ public class MainActivity extends ActionBarActivity {
 				//find out if we already have it
 				if(theMap==null){
 					//get the map
-					
 					SupportMapFragment mf = (SupportMapFragment) getSupportFragmentManager().findFragmentById(R.id.map);
 					theMap = mf.getMap();
 					
@@ -93,6 +99,11 @@ public class MainActivity extends ActionBarActivity {
 				Desmond();
 				Doneraile();
 				DromoreWood();
+				DunAonghasa();
+				DungarvanCastle();
+				DunmoreCave();
+				McAllisterCottage();
+				EmoCourt();
 				}
 	
 	private void Barryscourt() 
@@ -236,14 +247,133 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, DromoreWood.class);
 		            		startActivity(intent);
 		            	}
-		            	
+		            	else if (DunAonghasa.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, DunAonghasa.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (DungarvanCastle.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, DungarvanCastle.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (DunmoreCave.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, DunmoreCave.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (McAllisterCottage.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, McAllisterCottage.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (EmoCourt.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, EmoCourt.class);
+		            		startActivity(intent);
+		            	}
 		            	
 		            }		
 		        });		
 	}
 	
 	
+public void EmoCourt(){
+		
+		LatLng pos = new LatLng(53.107194, -7.1968533);
+				
+		EmoCourt = theMap.addMarker(new MarkerOptions()
+				
+						.title("Emo Court")
+						.snippet("Neo-classical House")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		EmoCourt.isInfoWindowShown();
+			
+		}
 	
+	
+	
+	
+public void McAllisterCottage(){
+		
+		LatLng pos = new LatLng(52.9619269, -6.5648108);
+				
+		McAllisterCottage = theMap.addMarker(new MarkerOptions()
+				
+						.title("Dwyer McAllister Cottage")
+						.snippet("Traditional Cottage - 1798 Rebellion")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		McAllisterCottage.isInfoWindowShown();
+			
+		}
+	
+	
+public void DunmoreCave(){
+		
+		LatLng pos = new LatLng(52.733981, -7.246861);
+				
+		DunmoreCave= theMap.addMarker(new MarkerOptions()
+				
+						.title("DunmoreCave")
+						.snippet("Site of Viking massacre in 928")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		DunmoreCave.isInfoWindowShown();
+			
+		}
+	
+	
+public void DungarvanCastle(){
+		
+		LatLng pos = new LatLng(52.0889827, -7.6162451);
+				
+		DungarvanCastle = theMap.addMarker(new MarkerOptions()
+				
+						.title("Dungarvan Castle")
+						.snippet("12th-century shell keep")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		DungarvanCastle.isInfoWindowShown();
+			
+		}
+	
+	
+	
+public void DunAonghasa(){
+		
+		LatLng pos = new LatLng(53.125553, -9.766848);
+				
+		DunAonghasa = theMap.addMarker(new MarkerOptions()
+				
+						.title("Dun Aonghasa")
+						.snippet("Prehistoric stone fort")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		DunAonghasa.isInfoWindowShown();
+			
+		}
 	public void DromoreWood(){
 		
 		LatLng pos = new LatLng(52.7164544, -8.8615971);

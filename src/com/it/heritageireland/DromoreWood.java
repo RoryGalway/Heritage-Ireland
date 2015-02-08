@@ -8,9 +8,7 @@ import android.webkit.WebView;
 import android.widget.Button;
 
 public class DromoreWood extends Activity{
-
 	DatabaseHelper  databaseHelper;
-	
 	
 	public void onCreate(Bundle savedInstanceState)
 	{

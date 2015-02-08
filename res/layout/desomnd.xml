@@ -16,6 +16,7 @@
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="154dp"
+        android:layout_weight="41.55"
         android:src="@drawable/desmond" />
 
     <TextView
@@ -27,11 +28,10 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="144dp"
+        android:layout_height="130dp"
+        android:layout_weight="28.19"
         android:background="#FFFFFF"
-        android:text="Builth around 1500 and was used as a Customs House until 1641 when it was converted into a naval prison.In January 1747, a fire broke out, killing 54 of the prisoners. In 1791, the castle was donated by James Kearney MP to the town of Kinsale, and it was subsequently used as a town gaol till 1846, and during the Irish Famine as a workhouse.
-         
-        " />
+        android:text="Builth around 1500 and was used as a Customs House until 1641 when it was converted into a naval prison.In January 1747, a fire broke out, killing 54 of the prisoners. In 1791, the castle was donated by James Kearney MP to the town of Kinsale, and it was subsequently used as a town gaol till 1846, and during the Irish Famine as a workhouse." />
 
     <TextView
         android:id="@+id/textView4"

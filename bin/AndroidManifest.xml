@@ -93,6 +93,52 @@
             </intent-filter>
         </activity>
         
+         <activity
+            android:name=".EmoCourt"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.EmoCourt" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
+          <activity
+            android:name=".McAllisterCottage"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.McAllisterCottage" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
+          <activity
+            android:name=".DunmoreCave"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.DunmoreCave" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".DunAonghasa"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.DunAonghasa" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+        
+         <activity
+            android:name=".DungarvanCastle"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="com.it.heritageireland.DungarvanCastle" />
+                <category android:name="android.intent.category.DEFAULT" />
+            </intent-filter>
+        </activity>
+         
+         
                 <activity
             android:name=".Derrynane"
             android:label="@string/app_name" >

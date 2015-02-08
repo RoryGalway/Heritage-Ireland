@@ -87,7 +87,7 @@ public class Adare extends Activity{
 			
 		FacebookDialog shareDialog = new FacebookDialog.ShareDialogBuilder(a)
 		.setLink(appurl)
-	    .setName("Check out this get place on the Hidden Ireland app")
+	    .setName("Check out this great place on the Hidden Ireland app")
 	    .setCaption("Hello Facebook")
         .setApplicationName("Hidden Ireland")
         .setPicture("http://i62.tinypic.com/98zvv6.png")

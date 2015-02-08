@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+      android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg42"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dunmore Cave"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="153dp"
+        android:src="@drawable/dunmore" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="190dp"
+        android:background="#FFFFFF"
+        android:text="Dunmore is not one of the largest of Ireland&apos;s caves. It contains just a quarter of a mile of passages and at its deepest point, it descends to 150 ft (46 m), but it possesses some fine calcite formations. The most spectacular is the Market Cross, a distinctly cross-shaped column over 19 ft (5.8 m) high.
+The local people have given names to parts of Dunmore Cave. The entrance to the first cavern is called the &apos;fairies&apos; floor&apos;. The folklore has it that if you throw stones on this floor, the fairies will sweep them up so that they can sleep there.
+       
+" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TableLayout
+        android:id="@+id/ButtonsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:stretchColumns="0,1" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Add to favourites" />
+
+            <Button
+                android:id="@+id/directions"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Directions" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background_selector" />
+
+</LinearLayout>
