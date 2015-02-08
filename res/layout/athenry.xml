@@ -66,4 +66,12 @@ Medieval walls around Athenry are among the most complete and best preserved in 
 		
        </TableRow>
     </TableLayout>
+    
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background_selector" />
+
 </LinearLayout>

@@ -1701,7 +1701,7 @@ containing a value of this type.
         public static final int com_facebook_list_section_header_background=0x7f02007a;
         public static final int com_facebook_loginbutton_silver=0x7f02007b;
         public static final int com_facebook_logo=0x7f02007c;
-        public static final int com_facebook_picker_default_separator_color=0x7f0200c6;
+        public static final int com_facebook_picker_default_separator_color=0x7f0200c7;
         public static final int com_facebook_picker_item_background=0x7f02007d;
         public static final int com_facebook_picker_list_focused=0x7f02007e;
         public static final int com_facebook_picker_list_longpressed=0x7f02007f;
@@ -1756,25 +1756,26 @@ containing a value of this type.
         public static final int derrynane=0x7f0200b0;
         public static final int desmond=0x7f0200b1;
         public static final int doneraile=0x7f0200b2;
-        public static final int facebook_icon=0x7f0200b3;
-        public static final int facebook_icon2=0x7f0200b4;
-        public static final int fav2=0x7f0200b5;
-        public static final int fav42=0x7f0200b6;
-        public static final int favs=0x7f0200b7;
-        public static final int holy=0x7f0200b8;
-        public static final int ic_launcher=0x7f0200b9;
-        public static final int ic_plusone_medium_off_client=0x7f0200ba;
-        public static final int ic_plusone_small_off_client=0x7f0200bb;
-        public static final int ic_plusone_standard_off_client=0x7f0200bc;
-        public static final int ic_plusone_tall_off_client=0x7f0200bd;
-        public static final int icon=0x7f0200be;
-        public static final int iconmap2=0x7f0200bf;
-        public static final int ituntitled=0x7f0200c0;
-        public static final int list2=0x7f0200c1;
-        public static final int newgrange2=0x7f0200c2;
-        public static final int powered_by_google_dark=0x7f0200c3;
-        public static final int powered_by_google_light=0x7f0200c4;
-        public static final int share=0x7f0200c5;
+        public static final int dromore=0x7f0200b3;
+        public static final int facebook_icon=0x7f0200b4;
+        public static final int facebook_icon2=0x7f0200b5;
+        public static final int fav2=0x7f0200b6;
+        public static final int fav42=0x7f0200b7;
+        public static final int favs=0x7f0200b8;
+        public static final int holy=0x7f0200b9;
+        public static final int ic_launcher=0x7f0200ba;
+        public static final int ic_plusone_medium_off_client=0x7f0200bb;
+        public static final int ic_plusone_small_off_client=0x7f0200bc;
+        public static final int ic_plusone_standard_off_client=0x7f0200bd;
+        public static final int ic_plusone_tall_off_client=0x7f0200be;
+        public static final int icon=0x7f0200bf;
+        public static final int iconmap2=0x7f0200c0;
+        public static final int ituntitled=0x7f0200c1;
+        public static final int list2=0x7f0200c2;
+        public static final int newgrange2=0x7f0200c3;
+        public static final int powered_by_google_dark=0x7f0200c4;
+        public static final int powered_by_google_light=0x7f0200c5;
+        public static final int share=0x7f0200c6;
     }
     public static final class id {
         public static final int ButtonsTable=0x7f050061;
@@ -2001,13 +2002,14 @@ containing a value of this type.
         public static final int derrynane=0x7f030034;
         public static final int desomnd=0x7f030035;
         public static final int doneraile=0x7f030036;
-        public static final int fav=0x7f030037;
-        public static final int home=0x7f030038;
-        public static final int newgrange=0x7f030039;
-        public static final int rock=0x7f03003a;
-        public static final int stone=0x7f03003b;
-        public static final int support_simple_spinner_dropdown_item=0x7f03003c;
-        public static final int topplaces=0x7f03003d;
+        public static final int dromorewood=0x7f030037;
+        public static final int fav=0x7f030038;
+        public static final int home=0x7f030039;
+        public static final int newgrange=0x7f03003a;
+        public static final int rock=0x7f03003b;
+        public static final int stone=0x7f03003c;
+        public static final int support_simple_spinner_dropdown_item=0x7f03003d;
+        public static final int topplaces=0x7f03003e;
     }
     public static final class menu {
         public static final int main=0x7f0c0000;

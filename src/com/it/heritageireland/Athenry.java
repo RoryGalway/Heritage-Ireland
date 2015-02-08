@@ -21,43 +21,39 @@ public class Athenry extends Activity{
 		setContentView(R.layout.athenry);
 		
 		Button directions = (Button) findViewById(R.id.directions);
-        directions.setOnClickListener(new OnClickListener() {
-            public void onClick(View v) {
-            	WebView web;
+		Button share = (Button) findViewById(R.id.share);
+        Button fav = (Button) findViewById(R.id.add);
+        directions.setOnClickListener(onClickListener);
+        share.setOnClickListener(onClickListener);
+        fav.setOnClickListener(onClickListener);
+	}
+	
+	private OnClickListener onClickListener = new OnClickListener() {
+	     
+		public void onClick(View v){		
+			switch(v.getId()){
+			case R.id.share:
+				Adare.Share(Athenry.this, "Athenry Castle","13th century, tower house");	
+                break;
+			case R.id.directions:
+				WebView web;
             	web = new WebViewHelper().webview(Athenry.this);
                 // specify the URL we want to load
-                web.loadUrl("http://maps.google.com/maps?saddr=Current%20Location&daddr=53.299996, -8.744618");
+            	 web.loadUrl("http://maps.google.com/maps?saddr=Current%20Location&daddr=53.299996, -8.744618");
                 setContentView(web);
-             }
-        });
-			//	53.299996, -8.744618
-        
-        Button Fav = (Button) findViewById(R.id.add);
-        Fav.setOnClickListener(new OnClickListener() {
-        	
-            public void onClick(View agrs) {
-            	
-            	String Athenry = "Athenry";
+	               break;
+			case R.id.add:
+				String Altmont = "Athenry";
             	// Below is the adding to the db code
             	databaseHelper = new DatabaseHelper(Athenry.this, null,null, 1);
-            	Products product = new Products(Athenry.toString());
+            	Products product = new Products(Altmont.toString());
             	databaseHelper.addProduct(product);
-
-            	new AlertDialog.Builder( Athenry.this )
-                .setIcon(R.drawable.favs)
-                .setTitle( "Added to Favourites" )
-                .setPositiveButton( "Awsome!!!", new DialogInterface.OnClickListener() {
-                    public void onClick(DialogInterface dialog, int which) {
-                        Log.d( "AlertDialog", "Positive" );
-                    }
-           
-                } )
-                
-                .show();
-            
-             }
-        });
-        
-        
-	}
+            	Adare.saved(Athenry.this);
+	            break;
+	            
+			}     }
+		};
+	
+	
 }
+	

@@ -38,6 +38,7 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker Derrynane = null;
 	protected static Marker Desmond = null;
 	protected static Marker Doneraile = null;
+	protected static Marker DromoreWood = null;
 	
 	// The map
 	private GoogleMap theMap;
@@ -91,6 +92,7 @@ public class MainActivity extends ActionBarActivity {
 				Derrynane();
 				Desmond();
 				Doneraile();
+				DromoreWood();
 				}
 	
 	private void Barryscourt() 
@@ -230,6 +232,10 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, Doneraile.class);
 		            		startActivity(intent);
 		            	}
+		            	else if (DromoreWood.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, DromoreWood.class);
+		            		startActivity(intent);
+		            	}
 		            	
 		            	
 		            }		
@@ -237,6 +243,25 @@ public class MainActivity extends ActionBarActivity {
 	}
 	
 	
+	
+	public void DromoreWood(){
+		
+		LatLng pos = new LatLng(52.7164544, -8.8615971);
+				
+		DromoreWood = theMap.addMarker(new MarkerOptions()
+				
+						.title("Dromore Wood")
+						.snippet("Nature reserve")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		DromoreWood.isInfoWindowShown();
+			
+		}
 	
 	public void Doneraile(){
 		

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg42"
+    android:orientation="vertical" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Dromore Wood"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <ImageView
+        android:id="@+id/imageView1"
+        android:layout_width="match_parent"
+        android:layout_height="216dp"
+        android:src="@drawable/dromore" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="match_parent"
+        android:layout_height="132dp"
+        android:background="#FFFFFF"
+        android:text="The reserve has historical and archaeological aspects - the 17th century O’Brien Castle is still standing by the lake edge. There is also the site of Cahermacrea Castle, the site of Kilakee Church, two ring forts and a lime kiln.
+A lovely scenic national park just outside the town of Ennis in Ireland that offers two lovely walks about 3-5 kilometers through Irish Woodside and a lovely series of lakes." />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="" />
+
+    <TableLayout
+        android:id="@+id/ButtonsTable"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:stretchColumns="0,1" >
+
+        <TableRow
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <Button
+                android:id="@+id/add"
+                android:layout_width="112dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Add to favourites" />
+
+            <Button
+                android:id="@+id/directions"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button"
+                android:gravity="center_horizontal"
+                android:text="Directions" />
+        </TableRow>
+    </TableLayout>
+
+    <Button
+        android:id="@+id/share"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background_selector" />
+
+</LinearLayout>
