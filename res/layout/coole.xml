@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-         android:layout_width="match_parent"
+    android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/bg42"
     android:orientation="vertical" >
@@ -16,6 +16,7 @@
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
         android:layout_height="198dp"
+        android:layout_weight="1650"
         android:src="@drawable/coole" />
 
     <TextView
@@ -27,9 +28,9 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="116dp"
+        android:layout_height="103dp"
         android:background="#FFFFFF"
-        android:text=" W.B Yeats took great inspiration from his visits here while he wrote &apos;The Wild Swans of Coole&apos; 
+        android:text="W.B Yeats took great inspiration from his visits here while he wrote &apos;The Wild Swans of Coole&apos; 
 The site has also inspired great writers such as George Bernard Shaw and many others who carved their initials on the autograph tree which can be seen in the walled garden.
 " />
 
@@ -67,12 +68,12 @@ The site has also inspired great writers such as George Bernard Shaw and many ot
                 android:text="Directions" />
         </TableRow>
     </TableLayout>
+
     <Button
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/button_background_selector" 
-        />
+        android:background="@drawable/button_background_selector" />
 
 </LinearLayout>

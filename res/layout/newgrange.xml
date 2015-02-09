@@ -15,7 +15,7 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="157dp"
+        android:layout_height="184dp"
         android:src="@drawable/newgrange2" />
 
     <TextView
@@ -27,7 +27,7 @@
     <TextView
         android:id="@+id/textView2"
         android:layout_width="match_parent"
-        android:layout_height="162dp"
+        android:layout_height="152dp"
         android:background="#FFFFFF"
         android:text="Brú na Bóinne translates to Palace of the Boyne and show outstandnig neolithic monuments.
 The site is a complex of Neolithic mounds, chamber tombs, standing stones, henges and other prehistoric enclosures, some dating from as early as 35th century BC - 32nd century BC. The site predates the Egyptian pyramids and was built with sophistication and a knowledge of science and astronomy.

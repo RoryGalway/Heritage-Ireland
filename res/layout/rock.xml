@@ -15,7 +15,7 @@
     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="match_parent"
-        android:layout_height="174dp"
+        android:layout_height="170dp"
         android:src="@drawable/cap" />
 
     <TextView
@@ -28,11 +28,12 @@
         android:id="@+id/textView2"
         android:layout_width="match_parent"
         android:layout_height="128dp"
+        android:layout_weight="2.71"
         android:background="#FFFFFF"
         android:text="It&apos;s huge, it&apos;s complex, it&apos;s iconic, there is nothing like it anywhere
 else in the world and it&apos;s right here in Cashel at the heart of Tipperary. 
-The Rock of Cashel (Carraig Phádraig), more formally St. Patrick&apos;s Rock, 
-it is also known as Cashel of the Kings. 
+The Rock of Cashel (Carraig Phádraig), more formally St. Patricks Rock, 
+it is also known as Cashel of the Kings. According to local mythology, the Rock of Cashel originated in the Devil&apos;s Bit, a mountain 20 miles (30 km) north of Cashel when St. Patrick banished Satan from a cave, resulting in the Rock&apos;s landing in Cashel.  Cashel is reputed to be the site of the conversion of the King of Munster by St. Patrick in the 5th century.
 " />
 
     <TextView
@@ -69,12 +70,12 @@ it is also known as Cashel of the Kings.
                 android:text="Directions" />
         </TableRow>
     </TableLayout>
-  <Button
+
+    <Button
         android:id="@+id/share"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-       	android:background="@drawable/button_background_selector" 
-        />
-    
+        android:background="@drawable/button_background_selector" />
+
 </LinearLayout>

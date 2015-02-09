@@ -57,6 +57,9 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker HoleOfSorrows = null;
 	protected static Marker Insideljerpoint = null;
 	protected static Marker JFKArboretum = null;
+	protected static Marker KilkennyCastle = null;
+	protected static Marker KillarneyNationalPark = null;
+	protected static Marker KilmacurraghArboretum = null;
 	
 	
 	
@@ -131,6 +134,9 @@ public class MainActivity extends ActionBarActivity {
 				HoleOfSorrows();
 				Insideljerpoint();
 				JFKArboretum();
+				KilkennyCastle();
+				KillarneyNationalPark();
+				KilmacurraghArboretum();
 				}
 	
 	private void Barryscourt() 
@@ -350,10 +356,67 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this,JFKArboretum.class);
 		            		startActivity(intent);
 		            	}
+		            	else if (KilkennyCastle.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, KilkennyCastle.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (KillarneyNationalPark.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, KillarneyNationalPark.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (KilmacurraghArboretum.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, KilmacurraghArboretum.class);
+		            		startActivity(intent);
+		            	}
 		            	
 		            }		
 		        });		}	
 
+		
+public void KilmacurraghArboretum(){
+		
+		LatLng pos = new LatLng(52.928051, -6.148256);
+				
+		KilmacurraghArboretum = theMap.addMarker(new MarkerOptions()
+				
+						.title("Kilmacurragh Arboretum")
+						.snippet("Garden and Parkland")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);		
+		KilmacurraghArboretum.isInfoWindowShown();
+		}	
+	
+public void KillarneyNationalPark(){
+		
+		LatLng pos = new LatLng(52.005845, -9.55618);
+				
+		KillarneyNationalPark = theMap.addMarker(new MarkerOptions()
+				
+						.title("Killarney National Park")
+						.snippet("Parklands")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);		
+		KillarneyNationalPark.isInfoWindowShown();
+		}	
+	
+public void KilkennyCastle(){
+		
+		LatLng pos = new LatLng(52.650462, -7.249298);
+				
+		KilkennyCastle = theMap.addMarker(new MarkerOptions()
+				
+						.title("Kilkenny Castle")
+						.snippet("Castle and Parklands")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);		
+		KilkennyCastle.isInfoWindowShown();
+		}	
 			
 public void JFKArboretum(){
 		
