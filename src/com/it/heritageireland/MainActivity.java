@@ -44,6 +44,20 @@ public class MainActivity extends ActionBarActivity {
 	protected static Marker DunmoreCave = null;
 	protected static Marker McAllisterCottage = null;
 	protected static Marker EmoCourt = null;
+	protected static Marker EnnisFriary = null;
+	protected static Marker FernsCastle = null;
+	protected static Marker GallarusCastle = null;
+	protected static Marker GarnishIsland = null;
+	protected static Marker GlebeHouse = null;
+	protected static Marker GlendaLough = null;
+	protected static Marker GlenveaghCaslte = null;
+	protected static Marker GriananofAileach = null;
+	protected static Marker HeywoodGardens = null;
+	protected static Marker HillofTara = null;
+	protected static Marker HoleOfSorrows = null;
+	protected static Marker Insideljerpoint = null;
+	protected static Marker JFKArboretum = null;
+	
 	
 	
 	
@@ -104,6 +118,19 @@ public class MainActivity extends ActionBarActivity {
 				DunmoreCave();
 				McAllisterCottage();
 				EmoCourt();
+				EnnisFriary();
+				FernsCastle();
+				GallarusCastle();
+				GarnishIsland();
+				GlebeHouse();
+				GlendaLough();
+				GlenveaghCaslte();
+				GriananofAileach();
+				HeywoodGardens();
+				HillofTara();
+				HoleOfSorrows();
+				Insideljerpoint();
+				JFKArboretum();
 				}
 	
 	private void Barryscourt() 
@@ -267,11 +294,311 @@ public class MainActivity extends ActionBarActivity {
 		            		Intent intent = new Intent(MainActivity.this, EmoCourt.class);
 		            		startActivity(intent);
 		            	}
+		            	else if (EnnisFriary.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, EnnisFriary.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (FernsCastle.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, FernsCastle.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GallarusCastle.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GallarusCastle.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GarnishIsland.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GarnishIsland.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GlebeHouse.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GlebeHouse.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GlendaLough.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GlendaLough.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GlenveaghCaslte.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GlenveaghCaslte.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (GriananofAileach.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, GriananofAileach.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (HeywoodGardens.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, HeywoodGardens.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (HillofTara.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, HillofTara.class);
+		            		startActivity(intent);
+		            		
+		            	}
+		            	
+		            	else if (HoleOfSorrows.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this, HoleOfSorrows.class);
+		            		startActivity(intent);
+		            		
+		            	}
+		            	
+		            	else if (Insideljerpoint.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this,Insideljerpoint.class);
+		            		startActivity(intent);
+		            	}
+		            	else if (JFKArboretum.isInfoWindowShown()){
+		            		Intent intent = new Intent(MainActivity.this,JFKArboretum.class);
+		            		startActivity(intent);
+		            	}
 		            	
 		            }		
-		        });		
-	}
+		        });		}	
+
+			
+public void JFKArboretum(){
+		
+		LatLng pos = new LatLng(52.320914, -6.933714);
+				
+		JFKArboretum = theMap.addMarker(new MarkerOptions()
+				
+						.title("JFK Arboretum")
+						.snippet("Garden")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		JFKArboretum.isInfoWindowShown();
+		}	
 	
+public void Insideljerpoint(){
+		
+		LatLng pos = new LatLng(52.510997, -7.158279);
+				
+		Insideljerpoint = theMap.addMarker(new MarkerOptions()
+				
+						.title("Jerpoint Abbey")
+						.snippet("Cistercian Monastery")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		Insideljerpoint.isInfoWindowShown();
+		}	
+public void HoleOfSorrows(){
+		
+		LatLng pos = new LatLng(53.0495693, -9.1404912);
+				
+		HoleOfSorrows = theMap.addMarker(new MarkerOptions()
+				
+						.title("Hole Of Sorrows")
+						.snippet("Neolithic Poulnabrone dolmen")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		HoleOfSorrows.isInfoWindowShown();
+		}	
+	
+public void HillofTara(){
+		
+		LatLng pos = new LatLng(53.578811, -6.611649);
+				
+		HillofTara = theMap.addMarker(new MarkerOptions()
+				
+						.title("Hill of Tara")
+						.snippet("Seat of the pre-Christian High Kings")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		HillofTara.isInfoWindowShown();
+		}	
+	
+public void GriananofAileach(){
+		
+		LatLng pos = new LatLng(55.0166662, -7.4166667);
+				
+		GriananofAileach = theMap.addMarker(new MarkerOptions()
+				
+						.title("Grianan of Aileach")
+						.snippet("Structure stone ringfort")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		GriananofAileach.isInfoWindowShown();
+		}	
+
+
+
+public void HeywoodGardens(){
+	
+	LatLng pos = new LatLng(52.873549, -7.309534);
+			
+	HeywoodGardens	 = theMap.addMarker(new MarkerOptions()
+			
+					.title("Heywood Gardens")
+					.snippet("Landscape")
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+					.position(pos)
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+			);
+			// below displays the window...remove this!!!
+			//Pin.showInfoWindow();
+			
+	HeywoodGardens.isInfoWindowShown();
+	}		
+
+public void GlenveaghCaslte	(){
+		
+		LatLng pos = new LatLng(55.008343, -7.98674);
+				
+		GlenveaghCaslte	 = theMap.addMarker(new MarkerOptions()
+				
+						.title("Glenveagh Caslte")
+						.snippet("Caslte and Park")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		GlenveaghCaslte.isInfoWindowShown();
+		}		
+public void GlebeHouse(){
+		
+		LatLng pos = new LatLng(55.002629, -7.904663);
+				
+		GlebeHouse = theMap.addMarker(new MarkerOptions()
+				
+						.title("Glebe House")
+						.snippet("Regency House")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		GlebeHouse.isInfoWindowShown();
+			
+		}		
+	
+
+
+public void GlendaLough(){
+	
+	LatLng pos = new LatLng(53.01106, -6.32267);
+			
+	GlendaLough = theMap.addMarker(new MarkerOptions()
+			
+					.title("GlendaLough")
+					.snippet("6th century Site")
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+					.position(pos)
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+			);
+			// below displays the window...remove this!!!
+			//Pin.showInfoWindow();
+			
+	GlendaLough.isInfoWindowShown();
+		
+	}
+
+public void GarnishIsland(){
+		
+		LatLng pos = new LatLng(51.7355755, -9.5431059);
+				
+		GarnishIsland = theMap.addMarker(new MarkerOptions()
+				
+						.title("Garnish Island")
+						.snippet("Glengarriff Harbour")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		GarnishIsland.isInfoWindowShown();
+			
+		}	
+	
+	
+public void FernsCastle(){
+		
+		LatLng pos = new LatLng(52.5901141, -6.4969973);
+				
+		FernsCastle = theMap.addMarker(new MarkerOptions()
+				
+						.title("Ferns Castle")
+						.snippet("13th-century Megalithic castle")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		FernsCastle.isInfoWindowShown();
+			
+		}
+
+
+public void GallarusCastle(){
+	
+	LatLng pos = new LatLng(52.172809, -10.352626);
+			
+	GallarusCastle = theMap.addMarker(new MarkerOptions()
+			
+					.title("Gallarus Castle")
+					.snippet("Pre 1600 castle")
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+					.position(pos)
+					.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+			);
+			// below displays the window...remove this!!!
+			//Pin.showInfoWindow();
+			
+	GallarusCastle.isInfoWindowShown();
+		
+	}
+
+
+public void EnnisFriary(){
+		
+		LatLng pos = new LatLng(52.84743, -8.98874);
+				
+		EnnisFriary = theMap.addMarker(new MarkerOptions()
+				
+						.title("Ennis Friary")
+						.snippet("13th-century Franciscan Friary")
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))
+						.position(pos)
+						.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_GREEN))			
+				);
+				// below displays the window...remove this!!!
+				//Pin.showInfoWindow();
+				
+		EnnisFriary.isInfoWindowShown();
+			
+		}
 	
 public void EmoCourt(){
 		

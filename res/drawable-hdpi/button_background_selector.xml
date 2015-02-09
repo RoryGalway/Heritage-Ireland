@@ -5,4 +5,5 @@
     <item android:state_focused="true" android:state_pressed="true" android:drawable="@drawable/facebook_icon2" />
     <item android:state_focused="false" android:state_pressed="true" android:drawable="@drawable/facebook_icon2"/>
     <item android:drawable="@drawable/facebook_icon" />
+    
 </selector>
