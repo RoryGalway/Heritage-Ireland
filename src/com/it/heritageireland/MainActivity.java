@@ -11,13 +11,17 @@ import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
+import android.location.Criteria;
 import android.location.Location;
 import android.location.LocationManager;
 import android.os.Bundle;
 import android.support.v7.app.ActionBarActivity;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+import android.app.AlertDialog;
 import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 
 
@@ -1029,10 +1033,7 @@ public void DunAonghasa(){
 	}
 	
 	
-	
 
-	
-	
 	
 	private void updatePlaces()
 	{
@@ -1040,23 +1041,30 @@ public void DunAonghasa(){
 		locMan = (LocationManager)getSystemService(Context.LOCATION_SERVICE);
 		//get last location
 		Location lastLoc = locMan.getLastKnownLocation(LocationManager.NETWORK_PROVIDER);
-		double lat = lastLoc.getLatitude();
-		double lng = lastLoc.getLongitude();
-		//create LatLng
-		LatLng lastLatLng = new LatLng(lat, lng);
+		String provider = locMan.getBestProvider(new Criteria(), true);
+		if (lastLoc != null) {
+			double lat = lastLoc.getLatitude();
+			double lng = lastLoc.getLongitude();
+            LatLng UserLoc = new LatLng(lat, lng);
+            theMap.animateCamera(CameraUpdateFactory.newLatLngZoom(UserLoc, 7));
+          //remove any existing marker
+    		if(userMarker!=null) userMarker.remove();
+    		//create and set marker properties
+    		userMarker = theMap.addMarker(new MarkerOptions()
+    		.position(UserLoc)
+    		.title("You are here")
+    		.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
+    		.snippet("Your last recorded location"));
+    		
+    		//move to location 
+    		CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(UserLoc, 7);
+    		theMap.animateCamera(yourLocation);
+        } else {
+        	onProviderDisabled(provider);
+            Toast.makeText(getApplicationContext(), "cant get loc", Toast.LENGTH_LONG).show();
+        }
 
-		//remove any existing marker
-		if(userMarker!=null) userMarker.remove();
-		//create and set marker properties
-		userMarker = theMap.addMarker(new MarkerOptions()
-		.position(lastLatLng)
-		.title("You are here")
-		.icon(BitmapDescriptorFactory.defaultMarker(BitmapDescriptorFactory.HUE_RED))
-		.snippet("Your last recorded location"));
 		
-		//move to location 
-		CameraUpdate yourLocation = CameraUpdateFactory.newLatLngZoom(lastLatLng, 7);
-		theMap.animateCamera(yourLocation);
 	}
 	
 
@@ -1080,4 +1088,49 @@ public void DunAonghasa(){
 		}
 		return super.onOptionsItemSelected(item);
 	}
+	
+	public void onProviderDisabled(String provider) {
+		
+		
+		AlertDialog.Builder builder = new AlertDialog.Builder(this);
+		builder.setTitle("Ohh no!!! Your GPS is disabled");
+		builder.setCancelable(false);
+		builder.setPositiveButton("Enable GPS", new DialogInterface.OnClickListener()
+		{
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) 
+			{
+				Intent startGPS = new Intent(android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS);
+				startActivity(startGPS);
+				
+			}
+			
+			
+		});
+		
+		builder.setNegativeButton("Leave GPS off", new DialogInterface.OnClickListener()
+		{
+
+			@Override
+			public void onClick(DialogInterface dialog, int which) 
+			{
+				dialog.cancel();
+				
+			}
+			
+			
+		});
+		
+		AlertDialog alert = builder.create();
+		alert.show();
+		
+	}	
+	
+	
+	
+	
+	
+	
+	
 }
